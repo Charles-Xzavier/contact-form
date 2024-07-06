@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <!-- form -->
+      <form class="form">
+        <h1>Contact Us</h1>
+
+        <!-- first and last names -->
+        <div class="names row d-flex flex-column flex-sm-row">
+          <!--first name-->
+
+          <div class="firstname col-12 col-sm-6 d-flex flex-column">
+            <label>First Name <span>*</span></label>
+            <input type="text" name="firstname" class="firstname-input" />
+            <p class="empty-firstname-alert text-danger">This field is required</p>
+          </div>
+
+          <!--last name-->
+          <div class="lastname col-12 col-sm-6 d-flex flex-column">
+            <label>Last Name <span>*</span></label>
+            <input type="text" name="lastname" class="lastname-input" />
+            <p class="empty-lastname-alert text-danger">This field is required</p>
+          </div>
+        </div>
+
+        <!--email-->
+        <div class="email col-12 d-flex flex-column">
+          <label>Email Address <span>*</span></label>
+          <input type="email" name="email" class="email-input" />
+          <p class="invalid-email-alert text-danger">Please enter a valid email address</p>
+          <p class="empty-email-alert text-danger">This field is required</p>
+        </div>
+
+        <!--Query type-->
+        <div class="radio">
+          <label>Query Type <span>*</span></label>
+          <!--general enquiry-->
+
+          <div class="query radio-inputs">
+            <div class="query-type radio-option">
+              <input type="radio" name="query-type" class="radio-1 general-enquiry" value="general-enquiry" aria-required="true" />
+              <span>General Equiry</span>
+            </div>
+
+            <!--support request-->
+
+            <div class="query-type radio-option">
+              <input type="radio" name="query-type" class="radio-2 support" value="support-request" aria-required="true" />
+              <span>Support Request</span>
+            </div>
+          </div>
+
+          <p class="empty-query-alert text-danger">Please select a query type</p>
+        </div>
+
+        <div class="message">
+          <label>Message <span>*</span></label>
+          <textarea name="message" class="text"></textarea>
+          <p class="empty-message-alert text-danger">This field is required</p>
+        </div>
+
+        <div class="terms d-flex flex-column">
+          <div class="terms-consent d-flex flex-column flex-sm-row gap-3">
+            <input type="checkbox" name="consent" class="checkbox align-self-start align-self-sm-center" />
+            <p class="d-flex align-self-start align-self-sm-center gap-1">I consent to being contacted by the team <span>*</span></p>
+          </div>
+          <p class="unchecked-alert text-danger">To submit this form, please consent to being contacted</p>
+        </div>
+
+        <div class="submit d-grid col-12">
+          <button class="btn btn-success" type="submit">Submit</button>
+        </div>
+      </form>
+
+      <div class="success-message">
+        <div class="success">
+          <img src="./assets/images/icon-success-check.svg" alt="icon-success-check" />
+          <p>Message Sent!</p>
+        </div>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
